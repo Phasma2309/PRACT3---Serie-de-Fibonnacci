@@ -1,0 +1,15 @@
+def fibonacci(n):
+    fib_series = [0, 1]
+    while len(fib_series) < n:
+        fib_series.append(fib_series[-1] + fib_series[-2])
+    return fib_series
+
+num_of_terms = int(input("Ingrese el número de términos de la serie de Fibonacci que desea generar: "))
+
+if num_of_terms <= 0:
+    print("Por favor ingrese un número entero positivo.")
+else:
+    
+    fib_series = fibonacci(num_of_terms)
+    print("La serie de Fibonacci con", num_of_terms, "términos es:")
+    print(fib_series)
